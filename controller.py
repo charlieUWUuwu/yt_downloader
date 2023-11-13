@@ -12,9 +12,9 @@ class myMainWindow_controller(QtWidgets.QMainWindow):
         super().__init__()
         self.ui = MyUI.Ui_Dialog()
         self.ui.setupUi(self)
-        self.setup_control() # 元件初始化
+        self.setup_control()
 
-    def setup_control(self): # 元件初始化
+    def setup_control(self):
         self.ui.plainTextEdit.setPlaceholderText('https://') # 設置提示文字
         self.ui.fileButton.clicked.connect(self.buttonChooseFile)
         self.ui.pushButton_2.clicked.connect(self.button_mp3) # mp3下載確認按鈕
