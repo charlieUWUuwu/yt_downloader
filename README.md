@@ -1,6 +1,6 @@
 # yt_downloader
 
-![screen](https://github.com/charlieUWUuwu/yt_downloader/assets/111500816/0e7d1e57-a02b-45ea-ab8f-38215d8e63bb)
+![screen](./img/screen.png)
 
 ## How to use
 - Install the dependencies
