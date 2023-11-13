@@ -5,8 +5,9 @@
 ## How to use
 - Install the dependencies
 ```
-conda install ffmpeg
-pip install -r requirements.txt
+$ git clone https://github.com/charlieUWUuwu/yt_downloader.git
+$ conda install ffmpeg
+$ pip install -r requirements.txt
 ```
 
 - Quick start
