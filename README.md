@@ -21,6 +21,3 @@ python start.py
 ```
 pyinstaller -F -w --icon=MyICON.ico start.py
 ```
-
-## TODO
-直接使用pytube套件所下載的mp4，在上傳至手機時可能會出現錯誤，因此可參考mp3方式修改
