@@ -18,6 +18,10 @@ python start.py
 - Create an Executable using PyInstaller
 
   (You need to prepare your ico file, but it's optional)
-```
-pyinstaller -F -w --icon=MyICON.ico start.py
-```
+  
+  - step1 : copy the folder 'path/to/ffmpeg' into the current folder
+
+  - step2 : 
+  ```
+  pyinstaller -F -w --add-binary "./ffmpeg/Library/bin;." --icon=MyICON.ico start.py
+  ```
