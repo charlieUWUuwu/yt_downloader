@@ -17,7 +17,7 @@ python start.py
 
 - Create an Executable using PyInstaller
 
-  (You need to prepare your ico file, but it's optional)
+  (ico file is optional)
   
   - step1 : copy the folder 'path/to/ffmpeg' into the current folder
 
