@@ -58,9 +58,11 @@ class myMainWindow_controller(QtWidgets.QMainWindow):
         try:
             if destination != "選擇位置" and url != "" :
                 yt = YouTube(url, on_progress_callback=self.progress_callback)
+                video_name = str(yt.title).replace(":", " ")
+                video_name = video_name.replace("/", " ")
 
-                if os.path.exists(destination+'/'+str(yt.title)+'.mp4'):
-                    self.ui.showMsg.setText('這個影片好像下載過了喔，名稱是:' + str(yt.title) + '.mp4')
+                if os.path.exists(destination+'/'+str(video_name)+'.mp4'):
+                    self.ui.showMsg.setText('這個影片好像下載過了喔，名稱是:' + str(video_name) + '.mp4')
                     self.ui.showDone.setText("下載過了:0")
                 else:
                     # 強制指定1080p (但會沒有聲音...需要另外合併音軌)
@@ -68,7 +70,7 @@ class myMainWindow_controller(QtWidgets.QMainWindow):
                     video = yt.streams.filter().get_highest_resolution()
                     video.download(output_path=destination)
 
-                    self.ui.showMsg.setText(str(yt.title)+str(".mp4"))
+                    self.ui.showMsg.setText(video_name+str(".mp4"))
                     self.ui.showDone.setText("下載完成:)")
             else:
                 self.ui.showDone.setText("下載失敗:(")
@@ -93,9 +95,11 @@ class myMainWindow_controller(QtWidgets.QMainWindow):
         try:
             if destination != "選擇位置" and url != "" :
                 yt = YouTube(url, on_progress_callback=self.progress_callback) 
+                song_name = str(yt.title).replace(":", " ")
+                song_name = song_name.replace("/", " ")
 
-                if os.path.exists(destination+'/'+str(yt.title)+'.mp3'):
-                    self.ui.showMsg.setText('這個影片好像下載過了喔，名稱是:' + str(yt.title) + '.mp3')
+                if os.path.exists(destination+'/'+str(song_name)+'.mp3'):
+                    self.ui.showMsg.setText('這個影片好像下載過了喔，名稱是:' + str(song_name) + '.mp3')
                     self.ui.showDone.setText("下載過了:0")
                 else:
                     song_name = str(yt.title).replace(":", " ")
