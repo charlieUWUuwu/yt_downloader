@@ -1,0 +1,6 @@
+build/
+dist/
+__pycache__/
+charlie.ico
+start.spec
+ffmpeg
