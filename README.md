@@ -2,6 +2,9 @@
 
 ![screen](./img/screen.png)
 
+## Feature
+The encoding format of the downloaded MP3 file is compatible with iPhone Music.
+
 ## How to use
 - Install the dependencies
 ```
